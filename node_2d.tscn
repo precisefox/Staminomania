@@ -1,0 +1,639 @@
+[gd_scene format=3 uid="uid://bg8nhdkjhhmqr"]
+
+[ext_resource type="Script" uid="uid://op7e5y2qak3d" path="res://Main.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://c5jeag3e6mx23" path="res://Art/player.png" id="1_wtcfe"]
+[ext_resource type="FontFile" uid="uid://ckxtm1hnijkb2" path="res://COMIC.TTF" id="2_0hol4"]
+[ext_resource type="Texture2D" uid="uid://c1qkgh3838y2i" path="res://Art/board-1.png" id="2_epypp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epypp"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0hol4"]
+bg_color = Color(1, 0.75, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D" unique_id=1471909521 node_paths=PackedStringArray("gameSpaces") groups=["board"]]
+position = Vector2(8, 65)
+script = ExtResource("1_0e48y")
+gameSpaces = [NodePath("Start")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=924475636]
+
+[node name="StaminaBar" type="ProgressBar" parent="CanvasLayer" unique_id=1665734093]
+offset_left = 20.0
+offset_top = 50.0
+offset_right = 620.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_0hol4")
+theme_override_styles/background = SubResource("StyleBoxFlat_epypp")
+theme_override_styles/fill = SubResource("StyleBoxFlat_0hol4")
+max_value = 10.0
+value = 10.0
+show_percentage = false
+
+[node name="StaminaLabel" type="Label" parent="CanvasLayer" unique_id=315694201]
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 343.0
+offset_bottom = 73.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_0hol4")
+text = "10/10"
+
+[node name="Board" type="Sprite2D" parent="." unique_id=1263967652]
+position = Vector2(312, 120)
+texture = ExtResource("2_epypp")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1499925859]
+texture_filter = 1
+position = Vector2(36, 36)
+texture = ExtResource("1_wtcfe")
+
+[node name="Start" type="Marker2D" parent="." unique_id=1312813736]
+position = Vector2(36, 36)
+
+[node name="Spot1" type="Marker2D" parent="." unique_id=1187391046]
+position = Vector2(60, 36)
+
+[node name="Spot2" type="Marker2D" parent="." unique_id=1648696906]
+position = Vector2(84, 36)
+
+[node name="Spot3" type="Marker2D" parent="." unique_id=1845243664]
+position = Vector2(108, 36)
+
+[node name="Spot4" type="Marker2D" parent="." unique_id=1223613896]
+position = Vector2(132, 36)
+
+[node name="Spot5" type="Marker2D" parent="." unique_id=827864664]
+position = Vector2(156, 36)
+
+[node name="Spot6" type="Marker2D" parent="." unique_id=1368525369]
+position = Vector2(180, 36)
+
+[node name="Spot7" type="Marker2D" parent="." unique_id=1568564944]
+position = Vector2(204, 36)
+
+[node name="Spot8" type="Marker2D" parent="." unique_id=813774682]
+position = Vector2(228, 36)
+
+[node name="Spot9" type="Marker2D" parent="." unique_id=2135215950]
+position = Vector2(252, 36)
+
+[node name="Spot10" type="Marker2D" parent="." unique_id=1225170726]
+position = Vector2(276, 36)
+
+[node name="Spot11" type="Marker2D" parent="." unique_id=1448372796]
+position = Vector2(300, 36)
+
+[node name="Spot12" type="Marker2D" parent="." unique_id=94596988]
+position = Vector2(324, 36)
+
+[node name="Spot13" type="Marker2D" parent="." unique_id=1882993897]
+position = Vector2(348, 36)
+
+[node name="Spot14" type="Marker2D" parent="." unique_id=199607202]
+position = Vector2(372, 36)
+
+[node name="Spot15" type="Marker2D" parent="." unique_id=732778894]
+position = Vector2(396, 36)
+
+[node name="Spot16" type="Marker2D" parent="." unique_id=1596370374]
+position = Vector2(420, 36)
+
+[node name="Spot17" type="Marker2D" parent="." unique_id=1075210451]
+position = Vector2(444, 36)
+
+[node name="Spot18" type="Marker2D" parent="." unique_id=1113977796]
+position = Vector2(468, 36)
+
+[node name="Spot19" type="Marker2D" parent="." unique_id=540705026]
+position = Vector2(492, 36)
+
+[node name="Spot20" type="Marker2D" parent="." unique_id=1011082865]
+position = Vector2(516, 36)
+
+[node name="Spot21" type="Marker2D" parent="." unique_id=330580631]
+position = Vector2(540, 36)
+
+[node name="Spot22" type="Marker2D" parent="." unique_id=1715300004]
+position = Vector2(564, 36)
+
+[node name="Spot23" type="Marker2D" parent="." unique_id=298453053]
+position = Vector2(588, 36)
+
+[node name="Spot24" type="Marker2D" parent="." unique_id=1573585106]
+position = Vector2(36, 60)
+
+[node name="Spot25" type="Marker2D" parent="." unique_id=1867476107]
+position = Vector2(60, 60)
+
+[node name="Spot26" type="Marker2D" parent="." unique_id=1063612976]
+position = Vector2(84, 60)
+
+[node name="Spot27" type="Marker2D" parent="." unique_id=393746052]
+position = Vector2(108, 60)
+
+[node name="Spot28" type="Marker2D" parent="." unique_id=1981551808]
+position = Vector2(132, 60)
+
+[node name="Spot29" type="Marker2D" parent="." unique_id=1026655655]
+position = Vector2(156, 60)
+
+[node name="Spot30" type="Marker2D" parent="." unique_id=359270422]
+position = Vector2(180, 60)
+
+[node name="Spot31" type="Marker2D" parent="." unique_id=1578062627]
+position = Vector2(204, 60)
+
+[node name="Spot32" type="Marker2D" parent="." unique_id=638354159]
+position = Vector2(228, 60)
+
+[node name="Spot33" type="Marker2D" parent="." unique_id=929720268]
+position = Vector2(252, 60)
+
+[node name="Spot34" type="Marker2D" parent="." unique_id=747781163]
+position = Vector2(276, 60)
+
+[node name="Spot35" type="Marker2D" parent="." unique_id=1027576749]
+position = Vector2(300, 60)
+
+[node name="Spot36" type="Marker2D" parent="." unique_id=997657207]
+position = Vector2(324, 60)
+
+[node name="Spot37" type="Marker2D" parent="." unique_id=446287531]
+position = Vector2(348, 60)
+
+[node name="Spot38" type="Marker2D" parent="." unique_id=248492423]
+position = Vector2(372, 60)
+
+[node name="Spot39" type="Marker2D" parent="." unique_id=536341371]
+position = Vector2(396, 60)
+
+[node name="Spot40" type="Marker2D" parent="." unique_id=1427062341]
+position = Vector2(420, 60)
+
+[node name="Spot41" type="Marker2D" parent="." unique_id=774225140]
+position = Vector2(444, 60)
+
+[node name="Spot42" type="Marker2D" parent="." unique_id=808594957]
+position = Vector2(468, 60)
+
+[node name="Spot43" type="Marker2D" parent="." unique_id=1961912300]
+position = Vector2(492, 60)
+
+[node name="Spot44" type="Marker2D" parent="." unique_id=374332055]
+position = Vector2(516, 60)
+
+[node name="Spot45" type="Marker2D" parent="." unique_id=508804312]
+position = Vector2(540, 60)
+
+[node name="Spot46" type="Marker2D" parent="." unique_id=1455749439]
+position = Vector2(564, 60)
+
+[node name="Spot47" type="Marker2D" parent="." unique_id=1407115694]
+position = Vector2(588, 60)
+
+[node name="Spot48" type="Marker2D" parent="." unique_id=1909294602]
+position = Vector2(36, 84)
+
+[node name="Spot49" type="Marker2D" parent="." unique_id=1197387407]
+position = Vector2(60, 84)
+
+[node name="Spot50" type="Marker2D" parent="." unique_id=1911882280]
+position = Vector2(84, 84)
+
+[node name="Spot51" type="Marker2D" parent="." unique_id=242072487]
+position = Vector2(108, 84)
+
+[node name="Spot52" type="Marker2D" parent="." unique_id=1539623648]
+position = Vector2(132, 84)
+
+[node name="Spot53" type="Marker2D" parent="." unique_id=634217549]
+position = Vector2(156, 84)
+
+[node name="Spot54" type="Marker2D" parent="." unique_id=1284463079]
+position = Vector2(180, 84)
+
+[node name="Spot55" type="Marker2D" parent="." unique_id=1584960047]
+position = Vector2(204, 84)
+
+[node name="Spot56" type="Marker2D" parent="." unique_id=114558700]
+position = Vector2(228, 84)
+
+[node name="Spot57" type="Marker2D" parent="." unique_id=848355416]
+position = Vector2(252, 84)
+
+[node name="Spot58" type="Marker2D" parent="." unique_id=670483316]
+position = Vector2(276, 84)
+
+[node name="Spot59" type="Marker2D" parent="." unique_id=557798770]
+position = Vector2(300, 84)
+
+[node name="Spot60" type="Marker2D" parent="." unique_id=244131127]
+position = Vector2(324, 84)
+
+[node name="Spot61" type="Marker2D" parent="." unique_id=1021993124]
+position = Vector2(348, 84)
+
+[node name="Spot62" type="Marker2D" parent="." unique_id=1833793358]
+position = Vector2(372, 84)
+
+[node name="Spot63" type="Marker2D" parent="." unique_id=1898618755]
+position = Vector2(396, 84)
+
+[node name="Spot64" type="Marker2D" parent="." unique_id=844955006]
+position = Vector2(420, 84)
+
+[node name="Spot65" type="Marker2D" parent="." unique_id=188652157]
+position = Vector2(444, 84)
+
+[node name="Spot66" type="Marker2D" parent="." unique_id=937600040]
+position = Vector2(468, 84)
+
+[node name="Spot67" type="Marker2D" parent="." unique_id=1586808300]
+position = Vector2(492, 84)
+
+[node name="Spot68" type="Marker2D" parent="." unique_id=483862619]
+position = Vector2(516, 84)
+
+[node name="Spot69" type="Marker2D" parent="." unique_id=2145777688]
+position = Vector2(540, 84)
+
+[node name="Spot70" type="Marker2D" parent="." unique_id=576377186]
+position = Vector2(564, 84)
+
+[node name="Spot71" type="Marker2D" parent="." unique_id=768030592]
+position = Vector2(588, 84)
+
+[node name="Spot72" type="Marker2D" parent="." unique_id=2142203398]
+position = Vector2(36, 108)
+
+[node name="Spot73" type="Marker2D" parent="." unique_id=1716006866]
+position = Vector2(60, 108)
+
+[node name="Spot74" type="Marker2D" parent="." unique_id=1380070769]
+position = Vector2(84, 108)
+
+[node name="Spot75" type="Marker2D" parent="." unique_id=547664503]
+position = Vector2(108, 108)
+
+[node name="Spot76" type="Marker2D" parent="." unique_id=593273744]
+position = Vector2(132, 108)
+
+[node name="Spot77" type="Marker2D" parent="." unique_id=941856266]
+position = Vector2(156, 108)
+
+[node name="Spot78" type="Marker2D" parent="." unique_id=1469745535]
+position = Vector2(180, 108)
+
+[node name="Spot79" type="Marker2D" parent="." unique_id=247370710]
+position = Vector2(204, 108)
+
+[node name="Spot80" type="Marker2D" parent="." unique_id=2025845644]
+position = Vector2(228, 108)
+
+[node name="Spot81" type="Marker2D" parent="." unique_id=100935163]
+position = Vector2(252, 108)
+
+[node name="Spot82" type="Marker2D" parent="." unique_id=1868091594]
+position = Vector2(276, 108)
+
+[node name="Spot83" type="Marker2D" parent="." unique_id=1829010327]
+position = Vector2(300, 108)
+
+[node name="Spot84" type="Marker2D" parent="." unique_id=259716353]
+position = Vector2(324, 108)
+
+[node name="Spot85" type="Marker2D" parent="." unique_id=2049036583]
+position = Vector2(348, 108)
+
+[node name="Spot86" type="Marker2D" parent="." unique_id=1130235492]
+position = Vector2(372, 108)
+
+[node name="Spot87" type="Marker2D" parent="." unique_id=1208037123]
+position = Vector2(396, 108)
+
+[node name="Spot88" type="Marker2D" parent="." unique_id=978476236]
+position = Vector2(420, 108)
+
+[node name="Spot89" type="Marker2D" parent="." unique_id=1065912346]
+position = Vector2(444, 108)
+
+[node name="Spot90" type="Marker2D" parent="." unique_id=1113897729]
+position = Vector2(468, 108)
+
+[node name="Spot91" type="Marker2D" parent="." unique_id=22851859]
+position = Vector2(492, 108)
+
+[node name="Spot92" type="Marker2D" parent="." unique_id=1904199395]
+position = Vector2(516, 108)
+
+[node name="Spot93" type="Marker2D" parent="." unique_id=2090620487]
+position = Vector2(540, 108)
+
+[node name="Spot94" type="Marker2D" parent="." unique_id=1259691312]
+position = Vector2(564, 108)
+
+[node name="Spot95" type="Marker2D" parent="." unique_id=2116846097]
+position = Vector2(588, 108)
+
+[node name="Spot96" type="Marker2D" parent="." unique_id=369524022]
+position = Vector2(36, 132)
+
+[node name="Spot97" type="Marker2D" parent="." unique_id=2044984070]
+position = Vector2(60, 132)
+
+[node name="Spot98" type="Marker2D" parent="." unique_id=938468294]
+position = Vector2(84, 132)
+
+[node name="Spot99" type="Marker2D" parent="." unique_id=1418911711]
+position = Vector2(108, 132)
+
+[node name="Spot100" type="Marker2D" parent="." unique_id=991781374]
+position = Vector2(132, 132)
+
+[node name="Spot101" type="Marker2D" parent="." unique_id=197733358]
+position = Vector2(156, 132)
+
+[node name="Spot102" type="Marker2D" parent="." unique_id=1293462245]
+position = Vector2(180, 132)
+
+[node name="Spot103" type="Marker2D" parent="." unique_id=539219288]
+position = Vector2(204, 132)
+
+[node name="Spot104" type="Marker2D" parent="." unique_id=2105002865]
+position = Vector2(228, 132)
+
+[node name="Spot105" type="Marker2D" parent="." unique_id=1961705493]
+position = Vector2(252, 132)
+
+[node name="Spot106" type="Marker2D" parent="." unique_id=1022125537]
+position = Vector2(276, 132)
+
+[node name="Spot107" type="Marker2D" parent="." unique_id=1374955543]
+position = Vector2(300, 132)
+
+[node name="Spot108" type="Marker2D" parent="." unique_id=46893228]
+position = Vector2(324, 132)
+
+[node name="Spot109" type="Marker2D" parent="." unique_id=985498012]
+position = Vector2(348, 132)
+
+[node name="Spot110" type="Marker2D" parent="." unique_id=2027124646]
+position = Vector2(372, 132)
+
+[node name="Spot111" type="Marker2D" parent="." unique_id=1065692357]
+position = Vector2(396, 132)
+
+[node name="Spot112" type="Marker2D" parent="." unique_id=964346531]
+position = Vector2(420, 132)
+
+[node name="Spot113" type="Marker2D" parent="." unique_id=1049827292]
+position = Vector2(444, 132)
+
+[node name="Spot114" type="Marker2D" parent="." unique_id=2038679503]
+position = Vector2(468, 132)
+
+[node name="Spot115" type="Marker2D" parent="." unique_id=420369173]
+position = Vector2(492, 132)
+
+[node name="Spot116" type="Marker2D" parent="." unique_id=1885295352]
+position = Vector2(516, 132)
+
+[node name="Spot117" type="Marker2D" parent="." unique_id=43612374]
+position = Vector2(540, 132)
+
+[node name="Spot118" type="Marker2D" parent="." unique_id=1065419807]
+position = Vector2(564, 132)
+
+[node name="Spot119" type="Marker2D" parent="." unique_id=309570725]
+position = Vector2(588, 132)
+
+[node name="Spot120" type="Marker2D" parent="." unique_id=324104701]
+position = Vector2(36, 156)
+
+[node name="Spot121" type="Marker2D" parent="." unique_id=704668339]
+position = Vector2(60, 156)
+
+[node name="Spot122" type="Marker2D" parent="." unique_id=289840919]
+position = Vector2(84, 156)
+
+[node name="Spot123" type="Marker2D" parent="." unique_id=1673531746]
+position = Vector2(108, 156)
+
+[node name="Spot124" type="Marker2D" parent="." unique_id=1010463701]
+position = Vector2(132, 156)
+
+[node name="Spot125" type="Marker2D" parent="." unique_id=991940173]
+position = Vector2(156, 156)
+
+[node name="Spot126" type="Marker2D" parent="." unique_id=1258354821]
+position = Vector2(180, 156)
+
+[node name="Spot127" type="Marker2D" parent="." unique_id=1299871114]
+position = Vector2(204, 156)
+
+[node name="Spot128" type="Marker2D" parent="." unique_id=533654223]
+position = Vector2(228, 156)
+
+[node name="Spot129" type="Marker2D" parent="." unique_id=1564442994]
+position = Vector2(252, 156)
+
+[node name="Spot130" type="Marker2D" parent="." unique_id=1178500505]
+position = Vector2(276, 156)
+
+[node name="Spot131" type="Marker2D" parent="." unique_id=1640216645]
+position = Vector2(300, 156)
+
+[node name="Spot132" type="Marker2D" parent="." unique_id=250306577]
+position = Vector2(324, 156)
+
+[node name="Spot133" type="Marker2D" parent="." unique_id=1240197720]
+position = Vector2(348, 156)
+
+[node name="Spot134" type="Marker2D" parent="." unique_id=715935846]
+position = Vector2(372, 156)
+
+[node name="Spot135" type="Marker2D" parent="." unique_id=2015752174]
+position = Vector2(396, 156)
+
+[node name="Spot136" type="Marker2D" parent="." unique_id=284388333]
+position = Vector2(420, 156)
+
+[node name="Spot137" type="Marker2D" parent="." unique_id=154218959]
+position = Vector2(444, 156)
+
+[node name="Spot138" type="Marker2D" parent="." unique_id=910434156]
+position = Vector2(468, 156)
+
+[node name="Spot139" type="Marker2D" parent="." unique_id=97990019]
+position = Vector2(492, 156)
+
+[node name="Spot140" type="Marker2D" parent="." unique_id=2097117352]
+position = Vector2(516, 156)
+
+[node name="Spot141" type="Marker2D" parent="." unique_id=42362166]
+position = Vector2(540, 156)
+
+[node name="Spot142" type="Marker2D" parent="." unique_id=1799459225]
+position = Vector2(564, 156)
+
+[node name="Spot143" type="Marker2D" parent="." unique_id=646379183]
+position = Vector2(588, 156)
+
+[node name="Spot144" type="Marker2D" parent="." unique_id=1639002240]
+position = Vector2(36, 180)
+
+[node name="Spot145" type="Marker2D" parent="." unique_id=975230136]
+position = Vector2(60, 180)
+
+[node name="Spot146" type="Marker2D" parent="." unique_id=1869523762]
+position = Vector2(84, 180)
+
+[node name="Spot147" type="Marker2D" parent="." unique_id=1869232865]
+position = Vector2(108, 180)
+
+[node name="Spot148" type="Marker2D" parent="." unique_id=1415551480]
+position = Vector2(132, 180)
+
+[node name="Spot149" type="Marker2D" parent="." unique_id=53798827]
+position = Vector2(156, 180)
+
+[node name="Spot150" type="Marker2D" parent="." unique_id=1204738169]
+position = Vector2(180, 180)
+
+[node name="Spot151" type="Marker2D" parent="." unique_id=897410588]
+position = Vector2(204, 180)
+
+[node name="Spot152" type="Marker2D" parent="." unique_id=27888683]
+position = Vector2(228, 180)
+
+[node name="Spot153" type="Marker2D" parent="." unique_id=1065477044]
+position = Vector2(252, 180)
+
+[node name="Spot154" type="Marker2D" parent="." unique_id=1806315513]
+position = Vector2(276, 180)
+
+[node name="Spot155" type="Marker2D" parent="." unique_id=1977361903]
+position = Vector2(300, 180)
+
+[node name="Spot156" type="Marker2D" parent="." unique_id=2018933783]
+position = Vector2(324, 180)
+
+[node name="Spot157" type="Marker2D" parent="." unique_id=1567723398]
+position = Vector2(348, 180)
+
+[node name="Spot158" type="Marker2D" parent="." unique_id=1029253865]
+position = Vector2(372, 180)
+
+[node name="Spot159" type="Marker2D" parent="." unique_id=580078576]
+position = Vector2(396, 180)
+
+[node name="Spot160" type="Marker2D" parent="." unique_id=433402569]
+position = Vector2(420, 180)
+
+[node name="Spot161" type="Marker2D" parent="." unique_id=949382026]
+position = Vector2(444, 180)
+
+[node name="Spot162" type="Marker2D" parent="." unique_id=943297669]
+position = Vector2(468, 180)
+
+[node name="Spot163" type="Marker2D" parent="." unique_id=1497796796]
+position = Vector2(492, 180)
+
+[node name="Spot164" type="Marker2D" parent="." unique_id=319928968]
+position = Vector2(516, 180)
+
+[node name="Spot165" type="Marker2D" parent="." unique_id=990034134]
+position = Vector2(540, 180)
+
+[node name="Spot166" type="Marker2D" parent="." unique_id=1163062524]
+position = Vector2(564, 180)
+
+[node name="Spot167" type="Marker2D" parent="." unique_id=1701615912]
+position = Vector2(588, 180)
+
+[node name="Spot168" type="Marker2D" parent="." unique_id=162881735]
+position = Vector2(36, 204)
+
+[node name="Spot169" type="Marker2D" parent="." unique_id=519566878]
+position = Vector2(60, 204)
+
+[node name="Spot170" type="Marker2D" parent="." unique_id=1561428143]
+position = Vector2(84, 204)
+
+[node name="Spot171" type="Marker2D" parent="." unique_id=181585528]
+position = Vector2(108, 204)
+
+[node name="Spot172" type="Marker2D" parent="." unique_id=1854795709]
+position = Vector2(132, 204)
+
+[node name="Spot173" type="Marker2D" parent="." unique_id=497366852]
+position = Vector2(156, 204)
+
+[node name="Spot174" type="Marker2D" parent="." unique_id=1763134453]
+position = Vector2(180, 204)
+
+[node name="Spot175" type="Marker2D" parent="." unique_id=433150437]
+position = Vector2(204, 204)
+
+[node name="Spot176" type="Marker2D" parent="." unique_id=395919737]
+position = Vector2(228, 204)
+
+[node name="Spot177" type="Marker2D" parent="." unique_id=1241852480]
+position = Vector2(252, 204)
+
+[node name="Spot178" type="Marker2D" parent="." unique_id=776895160]
+position = Vector2(276, 204)
+
+[node name="Spot179" type="Marker2D" parent="." unique_id=1170819241]
+position = Vector2(300, 204)
+
+[node name="Spot180" type="Marker2D" parent="." unique_id=2085543989]
+position = Vector2(324, 204)
+
+[node name="Spot181" type="Marker2D" parent="." unique_id=1997050232]
+position = Vector2(348, 204)
+
+[node name="Spot182" type="Marker2D" parent="." unique_id=679068169]
+position = Vector2(372, 204)
+
+[node name="Spot183" type="Marker2D" parent="." unique_id=409268363]
+position = Vector2(396, 204)
+
+[node name="Spot184" type="Marker2D" parent="." unique_id=974896831]
+position = Vector2(420, 204)
+
+[node name="Spot185" type="Marker2D" parent="." unique_id=1264035344]
+position = Vector2(444, 204)
+
+[node name="Spot186" type="Marker2D" parent="." unique_id=777527380]
+position = Vector2(468, 204)
+
+[node name="Spot187" type="Marker2D" parent="." unique_id=192970840]
+position = Vector2(492, 204)
+
+[node name="Spot188" type="Marker2D" parent="." unique_id=1740502385]
+position = Vector2(516, 204)
+
+[node name="Spot189" type="Marker2D" parent="." unique_id=1809311882]
+position = Vector2(540, 204)
+
+[node name="Spot190" type="Marker2D" parent="." unique_id=1763323974]
+position = Vector2(564, 204)
+
+[node name="Spot191" type="Marker2D" parent="." unique_id=1506317017]
+position = Vector2(588, 204)
