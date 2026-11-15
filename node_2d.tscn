@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://bg8nhdkjhhmqr"]
 
 [ext_resource type="Script" uid="uid://op7e5y2qak3d" path="res://Main.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://c5jeag3e6mx23" path="res://Art/player.png" id="1_wtcfe"]
 [ext_resource type="FontFile" uid="uid://ckxtm1hnijkb2" path="res://COMIC.TTF" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://c1qkgh3838y2i" path="res://Art/board-1.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://dduy61yiets72" path="res://player neutral.png" id="3_d21ai"]
+[ext_resource type="Texture2D" uid="uid://bb3ymy0ueon5y" path="res://player happy.png" id="4_q6r6c"]
+[ext_resource type="Texture2D" uid="uid://bba8p7ebychrg" path="res://player sad.png" id="4_rj586"]
+[ext_resource type="Texture2D" uid="uid://ba30jflapa3yr" path="res://dead.png" id="5_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://cohuky2wks7xd" path="res://flag.png" id="6_rj586"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epypp"]
 bg_color = Color(0.2, 0.2, 0.2, 1)
@@ -24,6 +28,11 @@ border_color = Color(0, 0, 0, 1)
 [node name="Main" type="Node2D" unique_id=1471909521 node_paths=PackedStringArray("gameSpaces") groups=["board"]]
 position = Vector2(8, 65)
 script = ExtResource("1_0e48y")
+happy = ExtResource("4_q6r6c")
+neutral = ExtResource("3_d21ai")
+sad = ExtResource("4_rj586")
+dead = ExtResource("5_4d7sh")
+finish_texture = ExtResource("6_rj586")
 gameSpaces = [NodePath("Start")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=924475636]
@@ -53,6 +62,13 @@ theme_override_constants/outline_size = 10
 theme_override_fonts/font = ExtResource("2_0hol4")
 text = "10/10"
 
+[node name="WinLabel" type="Label" parent="CanvasLayer" unique_id=566125776]
+offset_left = 283.0
+offset_top = 14.0
+offset_right = 359.0
+offset_bottom = 37.0
+text = "YOU WIN!"
+
 [node name="Board" type="Sprite2D" parent="." unique_id=1263967652]
 position = Vector2(312, 120)
 texture = ExtResource("2_epypp")
@@ -60,7 +76,7 @@ texture = ExtResource("2_epypp")
 [node name="Player" type="Sprite2D" parent="." unique_id=1499925859]
 texture_filter = 1
 position = Vector2(36, 36)
-texture = ExtResource("1_wtcfe")
+texture = ExtResource("4_q6r6c")
 
 [node name="Start" type="Marker2D" parent="." unique_id=1312813736]
 position = Vector2(36, 36)
@@ -637,3 +653,10 @@ position = Vector2(564, 204)
 
 [node name="Spot191" type="Marker2D" parent="." unique_id=1506317017]
 position = Vector2(588, 204)
+
+[node name="Label" type="Label" parent="." unique_id=174583906]
+offset_left = 56.0
+offset_top = -54.0
+offset_right = 195.0
+offset_bottom = -31.0
+text = "Press \"R\" to retry"
